@@ -61,3 +61,16 @@ def post_order(node):
     post_order(node.left)
     post_order(node.right)
     print (node.data)
+
+def calc (node):
+    if node.data=="+":
+        return calc(node.left) + calc(node.right)
+    elif node.data=="-":
+        return calc(node.left) - calc(node.right)
+    elif node.data=="*":
+        return calc(node.left) * calc(node.right)
+    elif node.data=="/":
+        return calc(node.left)/calc(node.right)
+    else:
+        return node.data
+    
