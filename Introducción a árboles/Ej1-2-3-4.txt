@@ -1,0 +1,28 @@
+1) ¿Cuál de las siguientes afirmaciones sobre los árboles binarios es correcta?
+
+(B). Todo árbol binario completo también es un árbol binario lleno.
+
+2) ¿Cómo hacés para darte cuenta si dos árboles son idénticos?
+
+Para saber si dos árboles son idénticos básicamente debes compararlos, para estom debes compararlos uno 
+por uno con la importancia de usar el mismo método de recorrido y en cada "estación" comparar los valores.
+Así identificas una similitud entre árboles.
+
+3) ¿Qué relación hay entre la altura de un árbol binario perfecto y la cantidad de nodos que tiene ese árbol?
+
+Con la altura de un arbol puedes averiguar cuántos nodos tiene el mismo. (siempre que esté completo)
+con la funcion de (2 ^ Altura) - 1
+porque cada nodo tiene dos hijos. con cada nodo sumamos una altura más y la cant de nodos crece 
+exponencialmente. 
+restamos uno porque inicialmente tendremos unicamente la raíz. 
+en caso de que solo sea razi quedaría
+2^1 -1 = 1 (1 nodo)
+
+
+4) Implementá en Python una clase Nodo que se asemeje a un nodo de un árbol.
+
+    class Nodo:
+        def __init__(self, valor):
+            self.valor = valor
+            self.left = None
+            self.right = None
